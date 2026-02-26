@@ -1,16 +1,13 @@
-package org.iesra.revilofe
-
-import org.iesra.revilofe.un4.eje4_4.reverse
-
-fun main() {
-    val numbers = listOf("one", "two", "three", "four")
-    val numbersRev = reverse(numbers)
-
-    if (listOf("four", "three", "two", "one") != numbersRev) {
+fun main(){
+    val pila: Pila<String> = Pila<String>()
+    pila.push("one")
+    pila.push("two")
+    pila.push("three")
+    pila.push("four")
+    val numbersRev = reverse(pila.pila)
+    if (listOf("four", "three", "two", "one") != numbersRev)
         println("Error")
-    } else {
+    else
         println("Correcto")
-    }
-
     println(numbersRev)
 }
